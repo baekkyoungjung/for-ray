@@ -34,12 +34,14 @@ class InviteRay extends React.Component {
 	}
 
 	componentDidMount() {
+		const hall = new naver.maps.LatLng(37.5407383, 127.0692447,17);
 		const map = new naver.maps.Map(document.getElementById('map'), {
 			disableDoubleClickZoom: true,
 			disableDoubleTapZoom: true,
 			pinchZoom: false,
 			draggable: false,
 		});
+		map.setCenter(hall);
 
 		setTimeout(() => {
 			this.setState({
@@ -247,7 +249,13 @@ class InviteRay extends React.Component {
 							</p>*/}
 							{/*</Pulse>*/}
 			            </div>
-			            <div id="location" className="container">
+			            <div
+			            	id="location"
+			            	className="container"
+			            	style={{
+			            		marginTop: 45,
+			            	}}
+			            >
 							<div id="map"></div>
 
 			            	<div className="how-to-table">
@@ -256,11 +264,7 @@ class InviteRay extends React.Component {
 						            	장소
 					            	</div>
 					            	<div className="col-xs-9">
-					            		서울특별시 강남구 논현동 247-4
-										<br />
-										더 그레이스 켈리
-										<br />
-										문의사항
+					            		건대입구 스타시티 아트홀 (5층)
 					            	</div>
 					            </div>
 					            <div className="row">
@@ -304,11 +308,19 @@ class InviteRay extends React.Component {
 					            	</div>
 					            </div>
 					            
-				            	<p>
+				            	<div
+				            		style={{
+				            			fontSize: 25,
+				            			lineHeight: '1.5em',
+				            			textAlign: 'center',
+				            			marginTop: '30%',
+				            			marginBottom: '30%',
+				            		}}
+				            	>
 				            		축하 화환은 정중히 사양합니다.
 				            		<br />
 									좋은 마음만 감사히 받겠습니다.
-								</p>
+								</div>
 							</div>
 			            </div>
 			            <hr />
@@ -317,9 +329,7 @@ class InviteRay extends React.Component {
 								웨딩 사진
 							</h3>
 							<p>
-								아래의 사진을 클릭하면 신랑과 신부를
-								<br />
-								더 자세히 볼 수 있어요.
+								두 사람 사진 더 보기
 							</p>
 							<div className="our-pic">
 								{/*<button type="button" className="btn btn-default" onClick={this.onHandleFiltering.bind(null, 'all')}>함께</button>

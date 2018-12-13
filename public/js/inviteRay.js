@@ -40,8 +40,13 @@ class InviteRay extends React.Component {
 			disableDoubleTapZoom: true,
 			pinchZoom: false,
 			draggable: false,
+			scrollWheel: false,
 		});
 		map.setCenter(hall);
+		var marker = new naver.maps.Marker({
+		    position: new naver.maps.LatLng(37.5407383, 127.0692447,17),
+		    map: map
+		});
 
 		setTimeout(() => {
 			this.setState({

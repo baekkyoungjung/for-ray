@@ -192,12 +192,12 @@ class InviteRay extends React.Component {
 			                <div
 			                	style={{
 			                		fontSize: '1.6em',
-			                		marginTop: '30%',
-			                		marginBottom: '30%',
+			                		marginTop: '60%',
+			                		marginBottom: '60%',
 			                	}}
 			                >
 								<p className="text-center">“ 세상에서 나를<br />가장 나 답게<br />만들어주는 사람 ”</p>
-								<p className="text-center">이제는 그 사람과 평생을 함께하고 싶습니다.</p>
+								<p className="text-center" style={{ marginTop: '20%', }}>이제는 그 사람과 평생을 함께하고 싶습니다.</p>
 							</div>
 						</div>
 						<div
@@ -224,10 +224,15 @@ class InviteRay extends React.Component {
 							{/*<h3><span>이 날</span>이에요.</h3>*/}
 							<div
 								style={{
-									fontSize: 25,
+									fontSize: 20,
 									lineHeight: '1.5em',
 									textAlign: 'center',
 									marginBottom: 60,
+									borderBottom: '1px solid #999',
+									paddingLeft: 16,
+									paddingRight: 16,
+									paddingBottom: 16,
+									display: 'inline-block',
 								}}
 							>
 								일시: 2019년 1월 19일(토) 오후 1시<br/>
@@ -263,38 +268,25 @@ class InviteRay extends React.Component {
 			            >
 							<div id="map"></div>
 
-			            	<div className="how-to-table">
-								<div className="row">
-					            	<div className="col-xs-3">
-						            	장소
+			            	<div className="how-to-table" style={{ fontSize: 18, marginTop: 60, }}>
+					            <div className="" style={{ textAlign: 'center', }}>
+					            	<div className="text-center" style={{ fontSize: 22, borderBottom: '1px solid #999', paddingLeft: 16, paddingRight: 16, display: 'inline-block' }}>
+					            		지하철
 					            	</div>
-					            	<div className="col-xs-9">
-					            		건대입구 스타시티 아트홀 (5층)
-					            	</div>
+					            	<div style={{ marginTop: 12, }}>2호선 건대입구역 (2번 출구), 7호선 건대입구역 (3번 출구) 도보 1분 거리 위치</div>
 					            </div>
-					            <div className="row">
-					            	<div className="col-xs-3">
-						            	지하철 이용시
+					            <div className="" style={{ marginTop: 30, textAlign: 'center', }}>
+					            	<div className="text-center" style={{ fontSize: 22, borderBottom: '1px solid #999', paddingLeft: 16, paddingRight: 16, display: 'inline-block' }}>
+						            	자가용
 					            	</div>
-					            	<div className="col-xs-9">
-						            	2호선 건대입구역 (2번 출구), 7호선 건대입구역 (3번 출구) 도보 1분 거리 위치
-					            		{/*<span className="text-bold color-seven-green">7호선</span> / <span className="text-bold color-bundang">분당선</span> 강남구청역 2번 출구 도보 7분 거리 내외
-					            		<br />
-					            		<span className="text-bold color-seven-green">7호선</span> 학동역 1번 출구 도보 10분 거리 내외*/}
-					            	</div>
-					            </div>
-					            <div className="row">
-					            	<div className="col-xs-3">
-						            	자가용 이용시
-					            	</div>
-					            	<div className="col-xs-9">
+					            	<div className="text-center" style={{ marginTop: 12, }}>
 						            	서울 광진구 능동로 110 스타시티 영존 (서울 광진구 화양로 4-20 스타시티 영존)
 					            		{/*<span className="text-bold color-seven-green">7호선</span> / <span className="text-bold color-bundang">분당선</span> 강남구청역 2번 출구 도보 7분 거리 내외
 					            		<br />
 					            		<span className="text-bold color-seven-green">7호선</span> 학동역 1번 출구 도보 10분 거리 내외*/}
 					            	</div>
 					            </div>
-					            {/*<div className="row">
+					            {/*<div className="">
 					            	<div className="col-xs-3">
 						            	버스
 					            	</div>
@@ -304,11 +296,11 @@ class InviteRay extends React.Component {
 					            		<span className="color-blue text-bold">간선</span>: 141, 401, 640, 351, 472, 147, 301, 241B, 241A, 240
 					            	</div>
 					            </div>*/}
-								<div className="row">
-					            	<div className="col-xs-3">
+								<div className="" style={{ marginTop: 30, textAlign: 'center', }}>
+					            	<div className="text-center" style={{ fontSize: 22, borderBottom: '1px solid #999', paddingLeft: 16, paddingRight: 16, display: 'inline-block' }}>
 						            	주차안내
 					            	</div>
-					            	<div className="col-xs-9">
+					            	<div className="text-center" style={{ marginTop: 12, }}>
 					            		스타시티 건물내 주차 (2시간 무료),  건대병원 주차 (1시간 30분 무료)
 					            	</div>
 					            </div>
@@ -331,11 +323,8 @@ class InviteRay extends React.Component {
 			            <hr />
 						<div id="memories" className="container">
 							<h3>
-								웨딩 사진
+								갤러리
 							</h3>
-							<p>
-								두 사람 사진 더 보기
-							</p>
 							<div className="our-pic">
 								{/*<button type="button" className="btn btn-default" onClick={this.onHandleFiltering.bind(null, 'all')}>함께</button>
 								<button type="button" className="btn btn-default" onClick={this.onHandleFiltering.bind(null, 'bk')}>백경</button>

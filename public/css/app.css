@@ -1,15 +1,19 @@
+// @font-face {
+//   font-family: 'notoSans_ko_thin';
+//   src: url('https://s3.ap-northeast-2.amazonaws.com/invite-bkbj/etc/fonts/notoSans_ko_thin.woff') format('woff');
+// }
 @font-face {
-  font-family: 'notoSans_ko_thin';
-  src: url('https://s3.ap-northeast-2.amazonaws.com/invite-bkbj/etc/fonts/notoSans_ko_thin.woff') format('woff');
+  font-family: 'Batang_Regular';
+  src: url('https://s3.ap-northeast-2.amazonaws.com/invite-bkbj/etc/fonts/Batang_Regular.woff') format('woff');
 }
-@font-face {
-  font-family: 'SDGothicNeocTTF-aUltLt';
-  src: url('https://s3.ap-northeast-2.amazonaws.com/invite-bkbj/etc/fonts/SDGothicNeocTTF-aUltLt.woff') format('woff');
-}
-@font-face {
-  font-family: 'NanumSquare';
-  src: url('https://s3.ap-northeast-2.amazonaws.com/invite-bkbj/etc/fonts/NanumSquare.woff') format('woff');
-}
+// @font-face {
+//   font-family: 'SDGothicNeocTTF-aUltLt';
+//   src: url('https://s3.ap-northeast-2.amazonaws.com/invite-bkbj/etc/fonts/SDGothicNeocTTF-aUltLt.woff') format('woff');
+// }
+// @font-face {
+//   font-family: 'NanumSquare';
+//   src: url('https://s3.ap-northeast-2.amazonaws.com/invite-bkbj/etc/fonts/NanumSquare.woff') format('woff');
+// }
 /* DayPicker styles */
 .DayPicker {
   display: inline-block;
@@ -272,7 +276,7 @@
 }
 body {
   background-color: #fff;
-  font-family: 'SDGothicNeocTTF-aUltLt';
+  font-family: 'Batang_Regular';
   background-attachment: fixed;
   position: absolute;
   top: 0;
@@ -308,7 +312,7 @@ body ul {
 }
 body #main-wrapper #invite-says {
   background-color: #fff;
-  font-family: 'notoSans_ko_thin';
+  // font-family: 'notoSans_ko_thin';
   font-size: 1.3em;
   z-index: 1;
 }

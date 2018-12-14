@@ -288,6 +288,11 @@ body.full {
   margin: 0;
   padding: 0;
 }
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 12px;
+  }
+}
 body h3 {
   font-size: 1.8em;
   line-height: 1em;

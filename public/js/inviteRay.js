@@ -76,7 +76,7 @@ class InviteRay extends React.Component {
 		const newRows = [];
 		const imgWidth = 1280;
 		const imgHeight = 1920;
-		let i = 0;
+		let i = 1;
 		for (i; i < 5; i += 1) {
 			newRows.push({
 				thumb: `./public/img/${i}.jpg`,
@@ -191,12 +191,12 @@ class InviteRay extends React.Component {
 			                </div>
 			                <div
 			                	style={{
-			                		fontSize: 35,
+			                		fontSize: '1.6em',
 			                		marginTop: '30%',
 			                		marginBottom: '30%',
 			                	}}
 			                >
-								<p className="text-center">“ 세상에서 나를 가장 나 답게 만들어주는 사람 ”</p>
+								<p className="text-center">“ 세상에서 나를<br />가장 나 답게<br />만들어주는 사람 ”</p>
 								<p className="text-center">이제는 그 사람과 평생을 함께하고 싶습니다.</p>
 							</div>
 						</div>

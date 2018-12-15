@@ -426,13 +426,13 @@ class InviteRay extends React.Component {
 											className="img-responsive"
 										/>
 									</div>
-									<div className="col-xs-5" style={{ paddingLeft: 5, paddingRight: 5, marginTop: 16, height: 140, overflow: 'hidden',}}>
+									<div className="col-xs-5" style={{ paddingLeft: 0, paddingRight: 5, marginTop: 16, height: 140, overflow: 'hidden', }}>
 										<img
 											src="./public/img/7.jpg"
 											className="img-responsive"
 										/>
 									</div>
-									<div className="col-xs-7" style={{ paddingLeft: 5, paddingRight: 5, marginTop: 16, }}>
+									<div className="col-xs-7" style={{ paddingLeft: 5, paddingRight: 0, marginTop: 16, height: 140, overflow: 'hidden', }}>
 										<img
 											src="./public/img/8.jpg"
 											className="img-responsive"

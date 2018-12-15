@@ -221,7 +221,7 @@ class InviteRay extends React.Component {
 								</p>
 							</div>
 						</div>
-			            <div id="when" className="container" style={{ paddingTop: 80, paddingBottom: 80, backgroundColor: 'rgb(237, 237, 237)' }}>
+			            <div id="when" className="container" style={{ paddingTop: 80, paddingBottom: 80, backgroundColor: 'rgb(250, 250, 250)' }}>
 							{/*<h3><span>이 날</span>이에요.</h3>*/}
 							<div className="text-center">
 								<div
@@ -244,7 +244,7 @@ class InviteRay extends React.Component {
 							</div>
 							<div>
 								<img
-									src="./public/img/calendar.jpg"
+									src="./public/img/calendar2.jpg"
 									className="trigger img-responsive"
 									alt="Img"
 									style={{

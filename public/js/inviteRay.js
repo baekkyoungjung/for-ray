@@ -47,26 +47,12 @@ class InviteRay extends React.Component {
 		    position: new naver.maps.LatLng(37.5407383, 127.0692447,17),
 		    map: map
 		});
-		const contentString = [
-		        '<div class="iw_inner">',
-		        '   <h3>서울특별시청</h3>',
-		        '   <p>서울특별시 중구 태평로1가 31 | 서울특별시 중구 세종대로 110 서울특별시청<br />',
-		        '       <img src="'+ HOME_PATH +'/img/example/hi-seoul.jpg" width="55" height="55" alt="서울시청" class="thumb" /><br />',
-		        '       02-120 | 공공,사회기관 &gt; 특별,광역시청<br />',
-		        '       <a href="http://www.seoul.go.kr" target="_blank">www.seoul.go.kr/</a>',
-		        '   </p>',
-		        '</div>'
-		    ].join('');
 
-		const infowindow = new naver.maps.InfoWindow({
-		    content: contentString
-		});
 
 		naver.maps.Event.addListener(marker, "click", e => {
+			console.log('eeeee', e);
 		   	window.open('http://naver.me/5yIZycaI', '_blank');
 		});
-
-		infowindow.open(map, marker);
 
 
 		setTimeout(() => {

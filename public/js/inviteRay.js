@@ -223,21 +223,24 @@ class InviteRay extends React.Component {
 						</div>
 			            <div id="when" className="container" style={{ paddingTop: 80, paddingBottom: 80, backgroundColor: 'rgb(237, 237, 237)' }}>
 							{/*<h3><span>이 날</span>이에요.</h3>*/}
-							<div
-								style={{
-									fontSize: 20,
-									lineHeight: '1.5em',
-									textAlign: 'center',
-									marginBottom: 30,
-									borderBottom: '1px solid #999',
-									paddingLeft: 16,
-									paddingRight: 16,
-									paddingBottom: 16,
-									display: 'inline-block',
-								}}
-							>
-								일시: 2019년 1월 19일(토) 오후 1시<br/>
-								장소: 건대입구 스타시티 아트홀 (5층)
+							<div className="text-center">
+								<div
+									style={{
+										textAlign: 'center',
+										fontSize: 20,
+										lineHeight: '1.5em',
+										textAlign: 'center',
+										marginBottom: 30,
+										borderBottom: '1px solid #999',
+										paddingLeft: 16,
+										paddingRight: 16,
+										paddingBottom: 16,
+										display: 'inline-block',
+									}}
+								>
+									일시: 2019년 1월 19일(토) 오후 1시<br/>
+									장소: 건대입구 스타시티 아트홀 (5층)
+								</div>
 							</div>
 							<div>
 								<img
@@ -245,7 +248,6 @@ class InviteRay extends React.Component {
 									className="trigger img-responsive"
 									alt="Img"
 									style={{
-										width: '100%',
 										margin: 'auto',
 									}}
 								/>

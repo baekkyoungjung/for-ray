@@ -385,9 +385,12 @@ body #main-wrapper > #contents-wrapper #location .color-blue, body #main-wrapper
   color: #3a9af1;
 }
 body #main-wrapper > #contents-wrapper #location img, body #main-wrapper > #contents-wrapper #when img {
-  width: 65%;
-  // margin-right: 4px;
-  // padding-bottom: 4px;
+  width: 60%;
+}
+@media only screen and (max-width: 767px) {
+  body #main-wrapper > #contents-wrapper #location img, body #main-wrapper > #contents-wrapper #when img {
+    width: 100%;
+  }
 }
 body #main-wrapper > #contents-wrapper #location a, body #main-wrapper > #contents-wrapper #when a {
   color: #636b6f;

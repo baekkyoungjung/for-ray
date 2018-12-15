@@ -74,8 +74,9 @@ class InviteRay extends React.Component {
 
 	initRows() {
 		const newRows = [];
-		const imgWidth = 1280;
-		const imgHeight = 1920;
+		const imgWidth = 800;
+		const imgHeight = 1200;
+
 		let i = 1;
 		for (i; i < 5; i += 1) {
 			newRows.push({
@@ -220,14 +221,14 @@ class InviteRay extends React.Component {
 								</p>
 							</div>
 						</div>
-			            <div id="when" className="container">
+			            <div id="when" className="container" style={{ paddingTop: 80, paddingBottom: 80, backgroundColor: 'rgb(237, 237, 237)' }}>
 							{/*<h3><span>이 날</span>이에요.</h3>*/}
 							<div
 								style={{
 									fontSize: 20,
 									lineHeight: '1.5em',
 									textAlign: 'center',
-									marginBottom: 60,
+									marginBottom: 30,
 									borderBottom: '1px solid #999',
 									paddingLeft: 16,
 									paddingRight: 16,
@@ -238,14 +239,17 @@ class InviteRay extends React.Component {
 								일시: 2019년 1월 19일(토) 오후 1시<br/>
 								장소: 건대입구 스타시티 아트홀 (5층)
 							</div>
-							<img
-								src="./public/img/calendar.jpg"
-								className="trigger img-responsive"
-								alt="Img"
-								style={{
-									margin: 'auto',
-								}}
-							/>
+							<div>
+								<img
+									src="./public/img/calendar.jpg"
+									className="trigger img-responsive"
+									alt="Img"
+									style={{
+										width: '100%',
+										margin: 'auto',
+									}}
+								/>
+							</div>
 							{/*<DayPicker
 								modifiers={{ highlighted: new Date(2018, 3, 8) }}
 								month={new Date(2018, 3)}
@@ -400,6 +404,32 @@ class InviteRay extends React.Component {
 					    					</div>
 		                    			)
 			                    	})}
+								</div>
+								<div id="bonus-pic" className="row">
+									<div className="col-xs-12" style={{ padding: 0, marginTop: 15, }}>
+										<img
+											src="./public/img/5.jpg"
+											className="img-responsive"
+										/>
+									</div>
+									<div className="col-xs-4" style={{ paddingLeft: 5, paddingRight: 5, marginTop: 16, }}>
+										<img
+											src="./public/img/6.jpg"
+											className="img-responsive"
+										/>
+									</div>
+									<div className="col-xs-4" style={{ paddingLeft: 5, paddingRight: 5, marginTop: 16, }}>
+										<img
+											src="./public/img/7.jpg"
+											className="img-responsive"
+										/>
+									</div>
+									<div className="col-xs-4" style={{ paddingLeft: 5, paddingRight: 5, marginTop: 16, }}>
+										<img
+											src="./public/img/8.jpg"
+											className="img-responsive"
+										/>
+									</div>
 								</div>
 							</div>
 						</div>

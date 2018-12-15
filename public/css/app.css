@@ -699,3 +699,21 @@ p {
   width: 40px;
   filter: brightness(7);
 }
+
+// “ 
+// ”
+.copy-ray {
+  position: relative;
+}
+.copy-ray p::before {
+  content: '“';
+  position: relative;
+  top: 0;
+  left: -15px;
+}
+.copy-ray p::after {
+  content: '”';
+  position: relative;
+  top: 0;
+  right: -15px;
+}

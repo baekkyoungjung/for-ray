@@ -34,7 +34,7 @@ class InviteRay extends React.Component {
 	}
 
 	componentDidMount() {
-		const hall = new naver.maps.LatLng(37.5407383, 127.0692447,17);
+		const hall = new naver.maps.LatLng(37.5407383, 127.067409);
 		const map = new naver.maps.Map(document.getElementById('map'), {
 			disableDoubleClickZoom: true,
 			disableDoubleTapZoom: true,
@@ -43,10 +43,31 @@ class InviteRay extends React.Component {
 			scrollWheel: false,
 		});
 		map.setCenter(hall);
-		var marker = new naver.maps.Marker({
+		const marker = new naver.maps.Marker({
 		    position: new naver.maps.LatLng(37.5407383, 127.0692447,17),
 		    map: map
 		});
+		const contentString = [
+		        '<div class="iw_inner">',
+		        '   <h3>서울특별시청</h3>',
+		        '   <p>서울특별시 중구 태평로1가 31 | 서울특별시 중구 세종대로 110 서울특별시청<br />',
+		        '       <img src="'+ HOME_PATH +'/img/example/hi-seoul.jpg" width="55" height="55" alt="서울시청" class="thumb" /><br />',
+		        '       02-120 | 공공,사회기관 &gt; 특별,광역시청<br />',
+		        '       <a href="http://www.seoul.go.kr" target="_blank">www.seoul.go.kr/</a>',
+		        '   </p>',
+		        '</div>'
+		    ].join('');
+
+		const infowindow = new naver.maps.InfoWindow({
+		    content: contentString
+		});
+
+		naver.maps.Event.addListener(marker, "click", e => {
+		   	window.open('http://naver.me/5yIZycaI', '_blank');
+		});
+
+		infowindow.open(map, marker);
+
 
 		setTimeout(() => {
 			this.setState({
@@ -197,7 +218,12 @@ class InviteRay extends React.Component {
 			                		marginBottom: '60%',
 			                	}}
 			                >
-								<p className="text-center">“ 세상에서 나를<br />가장 나 답게<br />만들어주는 사람 ”</p>
+
+								<div className="copy-ray text-center">
+									<p>
+										세상에서 나를<br />가장 나 답게<br />만들어주는 사람
+									</p>
+								</div>
 								<p className="text-center" style={{ marginTop: '20%', }}>이제는 그 사람과 평생을 함께하고 싶습니다.</p>
 							</div>
 						</div>
@@ -214,10 +240,10 @@ class InviteRay extends React.Component {
 			                	}}
 			                >
 								<p className="text-center">
-									<b>서명석</b> <b>김미숙</b>의 장남 <b>승원</b>
+									<b>서명석</b> <b>김미숙</b><span style={{ fontSize: 21}}>의 장남</span> <b>승원</b>
 								</p>
 								<p className="text-center">
-									<b>김재태</b> <b>홍현미</b>의 장녀 <b>지원</b>
+									<b>김재태</b> <b>홍현미</b><span style={{ fontSize: 21}}>의 장녀</span> <b>지원</b>
 								</p>
 							</div>
 						</div>
@@ -227,19 +253,19 @@ class InviteRay extends React.Component {
 								<div
 									style={{
 										textAlign: 'center',
-										fontSize: 20,
+										fontSize: 19,
 										lineHeight: '1.5em',
 										textAlign: 'center',
 										marginBottom: 30,
 										borderBottom: '1px solid #999',
-										paddingLeft: 16,
-										paddingRight: 16,
+										paddingLeft: 12,
+										paddingRight: 12,
 										paddingBottom: 16,
 										display: 'inline-block',
 									}}
 								>
 									일시: 2019년 1월 19일(토) 오후 1시<br/>
-									장소: 건대입구 스타시티 아트홀 (5층)
+									장소: 건대입구 스타시티 아트홀 <span style={{ color: '#333', fontSize: 16, }}>(5층)</span>
 								</div>
 							</div>
 							<div>
@@ -279,14 +305,14 @@ class InviteRay extends React.Component {
 					            	<div className="text-center" style={{ fontSize: 22, borderBottom: '1px solid #999', paddingLeft: 16, paddingRight: 16, display: 'inline-block' }}>
 					            		지하철
 					            	</div>
-					            	<div style={{ marginTop: 12, }}>2호선 건대입구역 (2번 출구), 7호선 건대입구역 (3번 출구) 도보 1분 거리 위치</div>
+					            	<div style={{ marginTop: 12, }}>2호선 건대입구역 (2번 출구)<br/>7호선 건대입구역 (3번 출구) 도보 1분 거리 위치</div>
 					            </div>
 					            <div className="" style={{ marginTop: 30, textAlign: 'center', }}>
 					            	<div className="text-center" style={{ fontSize: 22, borderBottom: '1px solid #999', paddingLeft: 16, paddingRight: 16, display: 'inline-block' }}>
 						            	자가용
 					            	</div>
 					            	<div className="text-center" style={{ marginTop: 12, }}>
-						            	서울 광진구 능동로 110 스타시티 영존 (서울 광진구 화양로 4-20 스타시티 영존)
+						            	서울 광진구 능동로 110 스타시티 영존<br/>(서울 광진구 화양로 4-20 스타시티 영존)
 					            		{/*<span className="text-bold color-seven-green">7호선</span> / <span className="text-bold color-bundang">분당선</span> 강남구청역 2번 출구 도보 7분 거리 내외
 					            		<br />
 					            		<span className="text-bold color-seven-green">7호선</span> 학동역 1번 출구 도보 10분 거리 내외*/}
@@ -307,14 +333,14 @@ class InviteRay extends React.Component {
 						            	주차안내
 					            	</div>
 					            	<div className="text-center" style={{ marginTop: 12, }}>
-					            		스타시티 건물내 주차 (2시간 무료),  건대병원 주차 (1시간 30분 무료)
+					            		스타시티 건물내 주차 (2시간 무료)<br/>건대병원 주차 (1시간 30분 무료)
 					            	</div>
 					            </div>
 					            
 				            	<div
 				            		style={{
 				            			fontSize: 25,
-				            			lineHeight: '1.5em',
+				            			lineHeight: '1.7em',
 				            			textAlign: 'center',
 				            			marginTop: '30%',
 				            			marginBottom: '30%',

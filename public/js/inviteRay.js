@@ -34,7 +34,7 @@ class InviteRay extends React.Component {
 	}
 
 	componentDidMount() {
-		const hall = new naver.maps.LatLng(37.5407383, 127.067409);
+		const hall = new naver.maps.LatLng(37.5405994, 127.0691891);
 		const map = new naver.maps.Map(document.getElementById('map'), {
 			disableDoubleClickZoom: true,
 			disableDoubleTapZoom: true,
@@ -44,7 +44,7 @@ class InviteRay extends React.Component {
 		});
 		map.setCenter(hall);
 		const marker = new naver.maps.Marker({
-		    position: new naver.maps.LatLng(37.5407383, 127.0692447,17),
+		    position: new naver.maps.LatLng(37.5405994, 127.0691891),
 		    map: map
 		});
 
@@ -83,15 +83,25 @@ class InviteRay extends React.Component {
 		const newRows = [];
 		const imgWidth = 800;
 		const imgHeight = 1200;
-
+		
 		let i = 1;
-		for (i; i < 5; i += 1) {
-			newRows.push({
-				thumb: `./public/img/${i}.jpg`,
-				org: `./public/img/${i}.jpg`,
-				width: imgWidth,
-				height: imgHeight,
-			});
+		for (i; i < 9; i += 1) {
+
+			if (i > 4) {
+				newRows.push({
+					thumb: `./public/img/${i}.jpg`,
+					org: `./public/img/${i}.jpg`,
+					width: imgHeight,
+					height: imgWidth,
+				});
+			} else {
+				newRows.push({
+					thumb: `./public/img/${i}.jpg`,
+					org: `./public/img/${i}.jpg`,
+					width: imgWidth,
+					height: imgHeight,
+				});
+			}
 		};
 		return newRows;
 	}
@@ -291,7 +301,7 @@ class InviteRay extends React.Component {
 					            	<div className="text-center" style={{ fontSize: 22, borderBottom: '1px solid #999', paddingLeft: 16, paddingRight: 16, display: 'inline-block' }}>
 					            		지하철
 					            	</div>
-					            	<div style={{ marginTop: 12, }}>2호선 건대입구역 (2번 출구)<br/>7호선 건대입구역 (3번 출구) 도보 1분 거리 위치</div>
+					            	<div style={{ marginTop: 12, }}>2호선 건대입구역 (2번 출구)<br/>7호선 건대입구역 (3번 출구)</div>
 					            </div>
 					            <div className="" style={{ marginTop: 30, textAlign: 'center', }}>
 					            	<div className="text-center" style={{ fontSize: 22, borderBottom: '1px solid #999', paddingLeft: 16, paddingRight: 16, display: 'inline-block' }}>
@@ -403,7 +413,7 @@ class InviteRay extends React.Component {
 									    </div>
 									</div>
 								</div>
-								<div id="thumbnail-camera-roll" className="row">
+								<div id="thumbnail-camera-roll" className="row" style={{ marginBottom: 10, }}>
 				                    {rows.map((item, i) => {
 			                    		return (
 					    					<div key={i} className="roll col-xs-3 col-sm-2 col-md-2">
@@ -418,26 +428,6 @@ class InviteRay extends React.Component {
 					    					</div>
 		                    			)
 			                    	})}
-								</div>
-								<div id="bonus-pic" className="row">
-									<div className="col-xs-12" style={{ padding: 0, marginTop: 15, }}>
-										<img
-											src="./public/img/5.jpg"
-											className="img-responsive"
-										/>
-									</div>
-									<div className="col-xs-5" style={{ paddingLeft: 0, paddingRight: 5, marginTop: 16, height: 140, overflow: 'hidden', }}>
-										<img
-											src="./public/img/7.jpg"
-											className="img-responsive"
-										/>
-									</div>
-									<div className="col-xs-7" style={{ paddingLeft: 5, paddingRight: 0, marginTop: 16, height: 140, overflow: 'hidden', }}>
-										<img
-											src="./public/img/8.jpg"
-											className="img-responsive"
-										/>
-									</div>
 								</div>
 							</div>
 						</div>

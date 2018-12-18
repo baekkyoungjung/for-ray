@@ -424,7 +424,7 @@ class InviteRay extends React.Component {
 								<div id="thumbnail-camera-roll" className="row" style={{ marginBottom: 10, }}>
 				                    {rows.map((item, i) => {
 			                    		return (
-					    					<div key={i} className="roll col-xs-3 col-sm-2 col-md-2">
+					    					<div key={i} className={`roll col-xs-${(i === 4) ? 12 : i > 4 ? 4 : 3} col-sm-2 col-md-2`}>
 							                    <span className="invite-wedding-imgs">
 													<img
 						    							onClick={this.onHandleViewMode.bind(null, i)}

@@ -385,7 +385,8 @@ body #main-wrapper > #contents-wrapper #location .color-blue, body #main-wrapper
   color: #3a9af1;
 }
 body #main-wrapper > #contents-wrapper #location img, body #main-wrapper > #contents-wrapper #when img {
-  width: 60%;
+  margin: auto;
+  width: 80%;
 }
 @media only screen and (max-width: 767px) {
   body #main-wrapper > #contents-wrapper #location img, body #main-wrapper > #contents-wrapper #when img {

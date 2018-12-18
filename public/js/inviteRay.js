@@ -34,25 +34,25 @@ class InviteRay extends React.Component {
 	}
 
 	componentDidMount() {
-		const hall = new naver.maps.LatLng(37.5405994, 127.0691891);
-		const map = new naver.maps.Map(document.getElementById('map'), {
-			disableDoubleClickZoom: true,
-			disableDoubleTapZoom: true,
-			pinchZoom: false,
-			draggable: false,
-			scrollWheel: false,
-		});
-		map.setCenter(hall);
-		const marker = new naver.maps.Marker({
-		    position: new naver.maps.LatLng(37.5405994, 127.0691891),
-		    map: map
-		});
+		// const hall = new naver.maps.LatLng(37.5405994, 127.0691891);
+		// const map = new naver.maps.Map(document.getElementById('map'), {
+		// 	disableDoubleClickZoom: true,
+		// 	disableDoubleTapZoom: true,
+		// 	pinchZoom: false,
+		// 	draggable: false,
+		// 	scrollWheel: false,
+		// });
+		// map.setCenter(hall);
+		// const marker = new naver.maps.Marker({
+		//     position: new naver.maps.LatLng(37.5405994, 127.0691891),
+		//     map: map
+		// });
 
 
-		naver.maps.Event.addListener(marker, "click", e => {
-			console.log('eeeee', e);
-		   	window.open('http://naver.me/5yIZycaI', '_blank');
-		});
+		// naver.maps.Event.addListener(marker, "click", e => {
+		// 	console.log('eeeee', e);
+		//    	window.open('http://naver.me/5yIZycaI', '_blank');
+		// });
 
 
 		setTimeout(() => {
@@ -294,7 +294,15 @@ class InviteRay extends React.Component {
 			            		marginTop: 45,
 			            	}}
 			            >
-							<div id="map"></div>
+							<div id="map" style={{ width: '95%', margin: 'auto', }}>
+								<img
+									className="img-responsive"
+									src="./public/img/maps.jpeg"
+								/>
+								<div style={{ textAlign: 'center', marginTop: 6, fontFamily: 'sans-serif', fontSize: 12}}>
+									<a href="http://naver.me/FkuQ23kS">네이버 지도로 보기</a>
+									</div>
+							</div>
 
 			            	<div className="how-to-table" style={{ fontSize: 18, marginTop: 60, }}>
 					            <div className="" style={{ textAlign: 'center', }}>
